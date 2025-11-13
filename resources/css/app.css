@@ -1,11 +1,65 @@
-@import 'tailwindcss';
-
+@import "tailwindcss"; 
 @font-face {
-    font-family: "GenSan";
-    src: url("../Fonts/GeneralSans-Variable.ttf") format("ttf");
+    font-family: "GenSan";  
+    font-style: normal;
+    font-weight: 200 700;
+    src: url("../Fonts/GeneralSans-Variable.ttf") format("truetype");  
     font-display: swap;
 }
 
 @theme {
-    --font-GenSan: GenSan, "cursive";
+  --color-background-color: #0d0d0d;
+  --color-border-color: #2a2a2a;
+  --color-text-color-light: #a0a0a0;
+  --color-text-color-primary: #ffffff;
+    --color-darkui: #171717;  
+    --font-GenSan: "GenSan", sans-serif; 
+    /* Custom color tokens */
+    --color-background-light: #f5f5f7;
+    --color-background-dark: #000000;
+    --color-card-light: #ffffff;
+    --color-card-dark: #1d1d1f;
+    --color-field-light: #ffffff;
+    --color-field-dark: #333333;
+    --color-text-light: #1d1d1f;
+    --color-text-dark: #f5f5f7;
+    --color-text-secondary-light: #6e6e73;
+    --color-text-secondary-dark: #86868b;
+    --color-border-light: #d2d2d7;
+    --color-border-dark: #424245;
+    --color-accent-green: #2fd158;
+    --color-accent-purple: #5e5be6;
+}
+
+/* Tambahkan custom CSS di bawah ini, setelah Tailwind import */
+
+
+/* Scrollbar untuk Webkit (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 8px;              /* tipis aja */
+  height: 8px;             /* biar horizontal scrollbar juga slim */
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(26, 25, 25); /* transparan */
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2); /* abu putih transparan */
+  border-radius: 10px;                   /* bulat minimalis */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.4); /* lebih terang pas hover */
+}
+
+/* Firefox support */
+* {
+  scrollbar-width: thin;                 /* tipis */
+  scrollbar-color: rgba(255, 255, 255, 0.075) rgb(26, 25, 25); /* thumb + track */
+}
+
+tr > th,
+tr > td {
+  @apply max-w-[14ch] whitespace-nowrap overflow-hidden text-ellipsis px-2 text-left;
 }

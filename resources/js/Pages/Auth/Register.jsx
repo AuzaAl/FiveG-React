@@ -29,14 +29,14 @@ export default function Register() {
     <FGAuthLayout>
         <Head title="Register" />
         <div className="h-full w-full flex flex-col sm:flex-row gap-10 justify-between">
-        <div className="bg-white h-full w-3/6 rounded-4xl p-12 flex flex-col gap-25">
-            <div id="AuthFormHeader" className='w-full h-30 mt-15 font-GenSan'>
+        <div className="bg-white h-[calc(100vh-3rem)] w-3/6 rounded-4xl p-12 flex flex-col gap-10 font-GenSan">
+            <div id="AuthFormHeader" className='w-full h-30'>
                 <h3 className='text-[3em]'>Hi There!</h3>
                 <Link
                 href={route('login')}
                 ><p className='text-gray-400'>Sudah ada akun? <i className='font-bold text-black'>Log in</i></p></Link>
             </div>
-            <div id="AuthForm" className='w-full h-1/2 mb-15'>
+            <div id="AuthForm" className='w-full h-1/2'>
                 <form onSubmit={submit}>
                 <div>
                     <InputLabel htmlFor="name" value="Name" />
@@ -45,7 +45,7 @@ export default function Register() {
                         id="name"
                         name="name"
                         value={data.name}
-                        className="mt-1 block w-full border border-black"
+                        className="mt-1 block w-full border border-black h-[2.5rem]"
                         autoComplete="name"
                         isFocused={true}
                         onChange={(e) => setData('name', e.target.value)}
@@ -63,7 +63,7 @@ export default function Register() {
                         type="email"
                         name="email"
                         value={data.email}
-                        className="mt-1 block w-full border border-black"
+                        className="mt-1 block w-full border border-black h-[2.5rem]"
                         autoComplete="username"
                         onChange={(e) => setData('email', e.target.value)}
                         required
@@ -80,7 +80,7 @@ export default function Register() {
                         type="password"
                         name="password"
                         value={data.password}
-                        className="mt-1 block w-full border border-black"
+                        className="mt-1 block w-full border border-black h-[2.5rem]"
                         autoComplete="new-password"
                         onChange={(e) => setData('password', e.target.value)}
                         required
@@ -100,7 +100,7 @@ export default function Register() {
                         type="password"
                         name="password_confirmation"
                         value={data.password_confirmation}
-                        className="mt-1 block w-full border border-black"
+                        className="mt-1 block w-full border border-black h-[2.5rem]"
                         autoComplete="new-password"
                         onChange={(e) =>
                             setData('password_confirmation', e.target.value)
@@ -122,13 +122,13 @@ export default function Register() {
             </form>
             </div>
         </div>
-        <div className="border border-white h-full w-4/6 rounded-4xl overflow-hidden relative z-1">
+        <div className="border border-white h-[calc(100vh-3rem)] w-4/6 rounded-4xl overflow-hidden relative z-1">
             <div id="right-content" className='text-white p-10 flex flex-col gap-5'>
-                <h2 className='text-[9em] w-full'>Hey Friend!</h2>
-                <p className='text-4xl -mt-10 w-3/4'>Signup sekarang, jangan bikin aku nungguin.</p>
+                <h2 className='text-[8em] w-full'>Hey Friend!</h2>
+                <p className='text-4xl -mt-5 w-3/4'>Signup sekarang, jangan bikin aku nungguin.</p>
             </div>
             <div className=" w-full h-full">
-                    <Lottie animationData={star} loop={true} className='absolute size-[110rem] top-0 -right-70 z-0 scale-x-[-1]'/>
+                    <Lottie animationData={star} loop={true} className='absolute size-[70rem] top-10 right-10 z-0 scale-x-[-1]'/>
             </div>
         </div>
         </div>

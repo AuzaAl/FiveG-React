@@ -11,8 +11,6 @@ import React from 'react'
 import star from '../../../../public/stars.json'
 import Lottie from 'lottie-react'
 
-import '../../../css/app.css';
-
 export default function Login({status, canResetPassword}) {
         const { data, setData, post, processing, errors, reset } = useForm({
             email: '',
@@ -30,10 +28,11 @@ export default function Login({status, canResetPassword}) {
   return (
     <FGAuthLayout>
         <Head title="Log in" />
-        <div className="h-full w-full flex flex-col sm:flex-row gap-10 justify-between">
-        <div className="bg-white h-full w-3/6 rounded-4xl p-12 flex flex-col gap-25">
-            <div id="AuthFormHeader" className='w-full h-30 mt-15 font-GenSan'>
-                <h3 className='text-[3em]'>Welcome Back!</h3>
+        <div className="h-full w-full flex flex-col sm:flex-row gap-10 justify-between items-center">
+        <div className="bg-white h-[calc(100vh-3rem)] w-3/6 rounded-4xl p-12 flex flex-col gap-25 font-GenSan">
+            <div id="AuthFormHeader" className='w-full h-30 mt-15'>
+                
+                <h3 className='text-[3em] '>Welcome Back!</h3>
                 <Link
                 href={route('register')}
                 ><p className='text-gray-400'>Belum ada akun? <span className='font-bold text-black'>signup</span></p></Link>
@@ -88,7 +87,7 @@ export default function Login({status, canResetPassword}) {
                     </label>
                 </div> */}
 
-                <div className="mt-30 flex flex-col-reverse items-center justify-center gap-3">
+                <div className=" mt-10 flex flex-col-reverse items-center justify-center gap-3">
                     {canResetPassword && (
                         <Link
                             href={route('password.request')}
@@ -105,13 +104,13 @@ export default function Login({status, canResetPassword}) {
             </form>
             </div>
         </div>
-        <div className="border border-white h-full w-4/6 rounded-4xl overflow-hidden relative z-1">
-            <div id="right-content" className='text-white p-10 flex flex-col gap-5'>
-                <h2 className='text-[9em] w-full'>Welcome!</h2>
+        <div className="border border-white h-[calc(100vh-3rem)] w-4/6 rounded-4xl overflow-hidden relative z-1">
+            <div id="right-content" className='text-white p-10 flex flex-col gap-5 font-GenSan'>
+                <h2 className='text-[8.5em] w-full font-semibold'>Welcome!</h2>
                 <p className='text-4xl -mt-10 w-3/4'>Login dulu, biar aku yakin kamu beneran yang ku tunggu.</p>
             </div>
             <div className=" w-full h-full">
-                    <Lottie animationData={star} loop={true} className='absolute size-[110rem] top-0 -left-50 z-0'/>
+                    <Lottie animationData={star} loop={true} className='absolute size-[70rem] top-20 -left-5 z-0'/>
             </div>
         </div>
         </div>

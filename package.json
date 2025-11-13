@@ -10,8 +10,10 @@
         "@headlessui/react": "^2.0.0",
         "@inertiajs/react": "^2.0.0",
         "@tailwindcss/forms": "^0.5.3",
+        "@tailwindcss/postcss": "^4.1.13",
         "@tailwindcss/vite": "^4.1.13",
         "@vitejs/plugin-react": "^4.2.0",
+        "autoprefixer": "^10.4.21",
         "axios": "^1.11.0",
         "concurrently": "^9.0.1",
         "laravel-vite-plugin": "^2.0.0",
@@ -21,6 +23,8 @@
         "vite": "^7.1.5"
     },
     "dependencies": {
-        "lottie-react": "^2.4.1"
+        "lottie-react": "^2.4.1",
+        "lucide-react": "^0.544.0",
+        "react-apple-emojis": "^3.0.0"
     }
 }
