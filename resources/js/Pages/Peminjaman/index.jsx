@@ -239,7 +239,7 @@ export default function Index() {
                                         Peminjam: {borrower.verified ? borrower.nama : "Tak ditemukan"}
                                     </h3>
                                     <p className="text-text-secondary-dark text-sm">
-                                        ID: {borrower.verified ? borrower.nisn : "Tidak valid"}
+                                        NISN: {borrower.verified ? borrower.nisn : "Tidak valid"}
                                     </p>
                                     <p className="text-text-secondary-dark text-sm">
                                         Jenis: {borrowerType}
@@ -260,7 +260,7 @@ export default function Index() {
                                         Barang: {item.verified ? item.nama_barang : "Tak ditemukan"}
                                     </h3>
                                     <p className="text-text-secondary-dark text-sm">
-                                        ID Barang: {item.verified ? item.kode_barang : "Tidak valid"}
+                                        Kode Barang: {item.verified ? item.kode_barang : "Tidak valid"}
                                     </p>
                                     <p className="text-text-secondary-dark text-sm">
                                         Kategori: {item.verified ? item.kategori : "-"}
